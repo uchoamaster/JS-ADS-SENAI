@@ -1,7 +1,7 @@
 # JS-ADS-SENAI
 
 
-1 - Realize um Fork do repositório da JS-ADS-SENAI para sua conta no GitHub;
+1 - Realize a criação do repositório igual à JS-ADS-SENAI para sua conta no GitHub;
 
 2 - Clone seu novo repositório clonado em sua máquina via Git Bash e abra com Visual Studio Code;
 
