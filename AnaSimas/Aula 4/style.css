@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    height: 100vh; 
+    background: linear-gradient(180deg, rgba(141,153,174,1) 50%, rgba(43,45,66,1) 100%);
+    font-family: 'Synonym', sans-serif;
+}
+
+#header{
+    margin-top: 2vh;
+}
+
+input{
+    border-radius: 3px;
+    border: none;
+    background-color: #d9d9d9;
+    box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.43);
+    -webkit-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.43);
+    -moz-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.43);
+}
+
+input:focus{
+    outline: none;
+}
+
+#main{
+    min-height: 65vh;
+}
+
+.h1{
+    font-family: 'Amulya', sans-serif;
+}
+
+.h1, .p-2{
+    color: #fff;
+}
+
+label{
+    margin: 8px;
+    color: #fff;
+}
+
+#botaoCopiar{
+    background: transparent;
+    box-shadow: none;
+    font-size: 20px;
+    color: #fff;
+    transition: .3s;
+}
+
+#botaoCopiar:hover{
+    color: #ef233c;
+}
+
+textarea{
+    resize: none;
+    background-color: #d9d9d9;
+    box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.43);
+    -webkit-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.43);
+    -moz-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.43);
+}
+
+select{
+    border-radius: 3px;
+    border: none;
+    width: 100%;
+    color: #2b2d42;
+}
+
+button{
+    background-color: #edf2f4;  
+    color: #2b2d42;
+    transition: .3s;
+    box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.43);
+    -webkit-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.43);
+    -moz-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.43);
+}
+
+button:hover{
+    background-color: #ef233c;
+}
+/*Loader do botão de traduzir*/
+
+#loader{
+    display: none;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.custom-loader {
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    background:conic-gradient(#0000 10%,#edf2f4);
+    -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 4px),#000 0);
+    animation:s3 1s infinite linear;
+  }
+  @keyframes s3 {to{transform: rotate(1turn)}}

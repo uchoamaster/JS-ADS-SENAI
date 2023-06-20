@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <fieldset>
+        <h1>Exercício 1</h1>
+        <p>Insira os valores separando por vírgula</p>
+        <p>Ex.: 1,2,3</p>
+        <input type="text" name="inputEx01" id="inputEx01">
+        <p>Maior valor: <span id="ex01"></span></p>
+        <button onclick="exercicio01()">Clique para ver</button>
+    </fieldset>
+    
+    <fieldset>
+        <h1>Exercício 2</h1>
+        <p>Insira uma frase ou sequência de números</p>
+        <p>Irá contar os espaços como caracteres</p>
+        <input type="text" name="inputEx01" id="inputEx02">
+        <p>Total de caracteres: <span id="ex02"></span></p>
+        <button onclick="exercicio02()">Clique para ver</button>
+    </fieldset>
+
+    <fieldset>
+        <h1>Exercício 3</h1>
+        <p>Cadastro de e-mail</p>
+        <div>
+            <div id="pessoa1">
+                <label for="pessoa1">Cadastro 1</label>
+                <input type="text" name="pessoa1" id="nomePessoa1" placeholder="nome">
+                <input type="email" name="pessoa1" id="emailPessoa1" placeholder="e-mail">
+                <button onclick="exercicio3salvar('Pessoa1')">Salvar</button>
+            </div>
+            <div id="pessoa2">
+                <label for="pessoa2">Cadastro 2</label>
+                <input type="text" name="pessoa2" id="nomePessoa2" placeholder="nome">
+                <input type="email" name="pessoa2" id="emailPessoa2" placeholder="e-mail">
+                <button onclick="exercicio3salvar('Pessoa2')">Salvar</button>                
+            </div>
+            <div id="pessoa3">
+                <label for="pessoa3">Cadastro 3</label>
+                <input type="text" name="pessoa3" id="nomePessoa3" placeholder="nome">
+                <input type="email" name="pessoa3" id="emailPessoa3" placeholder="e-mail">
+                <button onclick="exercicio3salvar('Pessoa3')">Salvar</button>
+            </div>
+            <br>
+        </div>
+        <br>
+        <label for="buscarEmail">Buscar e-mail</label>
+        <input type="text" name="buscarEmail" id="buscarEmail">
+        <button onclick="exercicio03()">Buscar</button>
+        <span id="retornoEx3"></span>
+    </fieldset>
+
+    <fieldset>
+        <h1>Exercício 04</h1>
+        <label for="frutas">Insira uma fruta</label><br>
+        <input type="text" name="frutas" id="buscarFruta">
+        <button onclick="exercicio04()">Enviar</button><br>
+        <span id="resultadoFruta"></span>
+    </fieldset>
+
+    <fieldset>
+        <h1>Exercício 05</h1>
+        <label for="numEx05">Insira um nº</label>
+        <input type="text" name="numEx05" id="numEx05">
+        <button onclick="exercicio05()">Duplicar</button>
+        <span id="resultadoEx05"></span>
+    </fieldset>
+
+    <fieldset>
+        <h1>Exercício 06</h1>
+        <label for="numEx06">Insira alguns números separados por vírgula</label>
+        <input type="text" name="numEx06" id="numEx06">
+        <button onclick="exercicio06()">Duplicar</button>
+        <span id="resultadoEx06"></span>
+    </fieldset>
+
+    <fieldset>
+        <h1>Exercício 07</h1>
+        <label for="numEx07">Insira 5 animais, separados por vírgula</label>
+        <input type="text" name="numEx07" id="numEx07">
+        <button>Salvar</button><br>
+
+        <label for="buscarAnimal">Buscar animal</label>
+        <input type="text" name="buscarAnimal" id="buscarAnimal">
+        <button onclick="exercicio07buscar()">Buscar</button>
+
+        <span id="resultadoEx07"></span>
+    </fieldset>
+
+    <fieldset>
+        <h1>Exercício 08</h1>
+        <label for="numEx08">Escreva:</label>
+        <input type="text" name="numEx08" id="numEx08">
+        <button onclick="exercicio08()">Salvar</button><br>
+        <span id="resultadoEx08"></span>
+    </fieldset>
+
+    <fieldset>
+        <h1>Exercício 09</h1>
+        <p>Passar variável</p>
+        <button onclick="exercicio09('variável')">Passar</button><br> <!--this.value-->
+        <br>
+        <span id="resultadoEx09"></span>
+    </fieldset>
+
+    <!--Parte 2-->
+    <h1>Parte 2 - Exercícios</h1>
+    <br>
+    <fieldset>
+        <h1>Exercício 01</h1>
+        <label for="ex01blco2">Escreva:</label>
+        <input type="text" name="ex01blco2" id="ex01blco2">
+        <button onclick="exercicio01b2()">Salvar</button><br>
+        <br>
+        <span id="resultadoex01blco2"></span>
+    </fieldset>
+
+    <fieldset>
+        <h1>Exercício 02</h1>
+        <label for="ex02blco2">Escreva um número:</label>
+        <input type="text" name="ex02blco2" id="ex02blco2">
+        <button onclick="exercicio02b2()">Calcular fatorial</button><br>
+        <br>
+        <span id="resultadoex02blco2"></span>
+    </fieldset>
+
+    <fieldset>
+        <h1>Exercício 03 - Formulário</h1>
+        <form action=# onsubmit="return exercicio03b2()">
+            <label for="nomeEx3">Nome</label>
+            <input type="text" name="nomeEx3" id="nomeEx3"><br>
+            <label for="emailEx3">E-mail</label>
+            <input type="email" name="emailEx3" id="emailEx3"><br>
+            <button type="submit">Enviar</button>         
+            <button type="reset">Limpar</button>
+        </form>
+    </fieldset>
+
+    <fieldset>
+        <h1>Exercício 04 - Formulário 2</h1>
+        <form action=# onsubmit="return exercicio04b2()">
+            <label for="idade">Idade - entre 18 e 60 anos</label>
+            <input type="text" name="idade" id="idade"><br>
+            <label for="altura">Altura - entre 150 e 200cm</label>
+            <input type="text" name="altura" id="altura"><br>
+            <button type="submit">Enviar</button>         
+            <button type="reset">Limpar</button>
+        </form>
+    </fieldset>
+
+</body>
+</html>
