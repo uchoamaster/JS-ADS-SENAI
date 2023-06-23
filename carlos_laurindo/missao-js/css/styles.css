@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  h2 {
+    margin-top: 30px;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    width: 400px; 
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #336699;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    width: 200px; /* Defina o tamanho desejado para os botões */
+  }
+  
+  button:hover {
+    background-color: #214466;
+    cursor: pointer;
+  }
+  
+  #resultado1,
+  #resultado2,
+  #resultado3,
+  #resultado4,
+  #resultado5,
+  #resultado6,
+  #resultado7 {
+    margin-top: 20px;
+    background-color: #e6f2ff;
+    padding: 10px;
+  }
