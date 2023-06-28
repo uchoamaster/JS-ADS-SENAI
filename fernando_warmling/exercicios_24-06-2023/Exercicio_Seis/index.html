@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 06</title>
+</head>
+
+<body>
+    <header></header>
+    <nav></nav>
+    <section></section>
+    <p id="nome"></p>
+    <footer></footer>
+</body>
+<script>
+    function myDisplay(some){
+        document.getElementById("nome").innerHTML= some;
+    }
+
+    let myPromise = new Promise(function (resolve, reject) {
+        let x = "";
+        if (x !="") {
+            resolve("Teste Positivo");
+            console.log("Teste Positivo")
+        } else {
+            reject("Error");
+            console.log("Teste Negativo");
+        }
+    });
+
+    myPromise.then(
+        function (value) { myDisplay(value); },
+        function (error) { myDisplay(error); }
+    );
+
+</script>
+
+</html>
