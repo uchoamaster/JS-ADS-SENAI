@@ -68,3 +68,81 @@ function executarDobrarValores() {
         document.getElementById('resultado7').innerText = `Erro ao ler o arquivo: ${erro}`;
       });
   }
+
+  function executarMathMethods() {
+    const resultado = document.getElementById('resultado1');
+    resultado.innerHTML = '';
+
+    resultado.innerHTML += Math.trunc(4.9) + '<br>';
+    resultado.innerHTML += Math.trunc(4.7) + '<br>';
+    resultado.innerHTML += Math.trunc(4.4) + '<br>';
+    resultado.innerHTML += Math.trunc(4.2) + '<br>';
+    resultado.innerHTML += Math.trunc(-4.2) + '<br>';
+
+    resultado.innerHTML += Math.sign(-4) + '<br>';
+    resultado.innerHTML += Math.sign(0) + '<br>';
+    resultado.innerHTML += Math.sign(4) + '<br>';
+
+    resultado.innerHTML += Math.cbrt(8) + '<br>';
+    resultado.innerHTML += Math.cbrt(64) + '<br>';
+    resultado.innerHTML += Math.cbrt(125) + '<br>';
+
+    resultado.innerHTML += Math.log2() + '<br>';
+    resultado.innerHTML += Math.log10() + '<br>';
+}
+
+// Função para executar o Array Find
+function executarArrayFind() {
+    const numbers = [4, 9, 16, 25, 29];
+    let first = numbers.find(myFunction);
+
+    function myFunction(value, index, array) {
+        return value > 18;
+    }
+
+    const resultado = document.getElementById('resultado2');
+    resultado.innerHTML = '';
+
+    resultado.innerHTML += first;
+}
+
+// Função para executar o Array Find Index
+function executarArrayFindIndex() {
+    const numbers = [4, 9, 16, 25, 29];
+    let first = numbers.findIndex(myFunction);
+
+    function myFunction(value, index, array) {
+        return value > 18;
+    }
+
+    const resultado = document.getElementById('resultado3');
+    resultado.innerHTML = '';
+
+    resultado.innerHTML += first;
+}
+
+// Função para executar o Array From
+function executarArrayFrom() {
+    const arrayFrom = Array.from("ABCDEFG");
+
+    const resultado = document.getElementById('resultado4');
+    resultado.innerHTML = '';
+
+    resultado.innerHTML += arrayFrom;
+}
+
+// Função para executar o Array Keys
+function executarArrayKeys() {
+    const fruits = ["Banana", "Laranja", "Maçã", "Manga"];
+    const keys = fruits.keys();
+
+    let text = "";
+    for (let x of keys) {
+        text += x + "<br>";
+    }
+
+    const resultado = document.getElementById('resultado5');
+    resultado.innerHTML = '';
+
+    resultado.innerHTML += text;
+}
