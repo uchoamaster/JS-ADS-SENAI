@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSon para tabela html</title>
+    <style>
+        *{font-family: calibri; font-size: 20px}
+        table, th, td{
+            border: solid 1px #ddd;
+            border-collapse: collapse;
+            padding: center;
+        }
+        th{
+            font-weight: bold;
+    
+        }
+        table{padding: 20px 0;}
+    </style>
+</head>
+
+<body>
+
+    <table id="container"></table>
+
+    <script>
+        let produtos = [
+            { fruta: "banana", preco: "R$3,00 /kg" },
+            { fruta: "laranja", preco: "R$ 4,00 /kg" },
+            { fruta: "limão", preco: "R$ 2,50 /kg" }
+        ];
+
+        let container = document.getElementById("container");
+        let table = document.createElement("table");
+
+        let cols = Object.keys(produtos[0]); // retorna propriedades numeráveis de uma array, logo 2 colunas
+
+        let thead = document.createElement("thead");
+        let tr = document.createElement("tr");
+
+        cols.forEach((item) => {
+            let th = document.createElement("th");
+            th.innerText = item;
+            tr.appendChild(th);
+
+        });
+            
+        thead.appendChild(tr);
+        table.append(tr);
+
+        produtos.forEach((item) => {
+            let tr = document.createElement("tr");
+            let vals = Object.values(item);
+
+            vals.forEach((elem) => {
+                let td = document.createElement("td");
+                td.innerText = elem;
+                tr.appendChild(td);
+            });
+            table.appendChild(tr);
+        });
+
+        container.appendChild(table);
+
+
+
+
+    </script>
+</body>
+
+
+
+</html>

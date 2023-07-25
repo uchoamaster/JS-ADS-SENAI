@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json para lista html</title>
+</head>
+<body>
+    <ol id="container"></ol>
+
+    <script>
+         let produtos = [
+            {
+            a: "banana - R$3,00/kg",
+            b: "laranja - R$4,00/kg",
+            c: "limão - R$2,0/kg",
+            d: "uva - R$5,00/kg" 
+        },
+           
+        ];
+        let container = document.getElementById("container");
+       
+        let vals = Object.values(produtos[0]);
+        
+        
+
+        let ol = document.createElement("ol");
+        vals.forEach((item) => {
+            let li = document.createElement("li");
+            li.innerText = item;
+            ol.appendChild(li);
+        });
+        container.appendChild(ol);
+
+       
+
+
+    </script>
+</body>
+</html>
