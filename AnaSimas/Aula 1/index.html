@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Exercícios JavaScript dia 06/04</h1>
+        </div>
+        <div class="exercicio">
+            <h2>Escolha a opção</h2>
+            <ul class="opcoes">
+                <li><input type="radio" name="opcao" id="refri" value="refrigerante">Refrigerante</li>
+                <li><input type="radio" name="opcao" id="sorvete" value="sorvete">Sorvete</li>
+                <li><input type="radio" name="opcao" id="suco" value="suco">Suco</li>
+            </ul>
+            <div class="submit">
+                <input type="text" name="qtd" id="qtd" placeholder="Quantidade">
+                <button type="submit" onsubmit="atividade1()">Pedido</button>
+            </div>
+        </div>
+        <div class="exercicio">
+            <h2>Subtração</h2>
+            <div class="inputs">
+                <input type="text" placeholder="Valor 1" id="valor1"> - <input type="text" placeholder="Valor 2" id="valor2">
+            </div>
+            <button id="botaoCalcularSubtracao">Calcular</button>
+            <div id="resultadoSub"></div>
+        </div>
+        <div class="exercicio">
+            <h2>Divisão</h2>
+            <div class="inputs">
+                <input type="text" placeholder="Valor 1" id="valor1div"> / <input type="text" placeholder="Valor 2" id="valor2div">
+            </div>
+            <button id="botaoCalcularDivisao">Calcular</button>
+            <div id="resultadoDiv"></div>
+        </div>
+        <div class="exercicio">
+            <h2>Estrutura de repetição</h2>
+            <p>Informe um número entre 1 e 1000 e tenha uma surpresa no console log</p>
+            <input type="text" name="valorRepeticao" id="valorRepeticao">
+            <button id="submitRepeticao">Repetir</button>
+        </div>
+        <div class="exercicio">
+            <h2>Objetos</h2>
+            <p>Imprimir um objeto no console</p>
+            <button id="usuario">Imprimir</button>
+        </div>
+        <div class="exercicio">
+            <h2>Nota</h2>
+            <p>Digite a nota do aluno</p>
+            <input type="text" id="nota">
+            <button id="enviarNota">Enviar</button>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

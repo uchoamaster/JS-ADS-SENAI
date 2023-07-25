@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade EaD 28/04</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section>
+        <!--Template literals-->
+        <div>
+            <h1>Template literals</h1>
+            <fieldset id="ex01tl">
+                <legend>Exercício 01</legend>
+                <p>Crie uma função que recebe um nome e retorna uma string utilizando template literals para dar boas-vindas ao usuário.</p>
+                <label for="nome">Digite seu nome:</label><br>
+                <input type="text" name="nome" id="nomeEx01tl">
+                <button onclick="ex01tl()"><i class="fa-solid fa-play"></i></button>
+            </fieldset>
+            <fieldset id="ex02tl">
+                <legend>Exercício 02</legend>
+                <p>Crie uma função que recebe uma data e retorna uma string formatada utilizando template literals.</p>
+                <label for="data">Digite uma data:</label><br>
+                <input type="date" name="data" id="dataEx02tl">
+                <button onclick="ex02tl()"><i class="fa-solid fa-play"></i></button>
+            </fieldset>
+            <fieldset id="ex03tl">
+                <legend>Exercício 03</legend>
+                <p>Crie uma função que recebe um objeto com as informações de um produto e retorna uma string utilizando template literals para exibir as informações na tela.</p>
+                <label for="nomeProduto">Digite o nome do produto:</label><br>
+                <input type="text" name="nomeProduto" id="nomeProdutoEx03tl"><br>
+                <label for="qtdProduto">Digite a quantidade:</label><br>
+                <input type="text" name="qtdProduto" id="qtdProdutoEx03tl"><br>
+                <label for="precoProduto">Digite o preço:</label><br>
+                <input type="text" name="precoProduto" id="precoProdutoEx03tl">
+                <button onclick="ex03tl()"><i class="fa-solid fa-play"></i></button>
+            </fieldset>
+        </div>
+    </section>
+    <section>
+        <!--Arrow functions-->
+        <div>
+            <h1>Arrow functions</h1>
+            <fieldset id="ex01af">
+                <legend>Exercício 01</legend>
+                <p>Crie uma função que recebe um array de números e utiliza arrow function para retornar a soma de todos eles.</p>
+                <label for="numEx01af">Digite um número, clique no botão + para adicionar mais números:</label><br>
+                <input type="text" name="numEx01af" class="numEx01af"><br>
+                <input type="text" class="numEx01af"><br>
+                <div id="novosNumerosEx1">
+                    <!--Aqui irão ter mais campos se o usuário adicioná-los-->
+                </div>
+                <button onclick = "addNumeroEx1()"><i class="fa-solid fa-plus"></i></button>
+                <button id="botaoEx01af"><i class="fa-solid fa-play"></i></button>
+            </fieldset>
+            <fieldset id="ex02af">
+                <legend>Exercício 02</legend>
+                <p>Crie uma função que recebe um array de strings e utiliza arrow function para retornar o número total de caracteres em todas as strings.</p>
+                <label for="fraseEx02af">Digite uma frase:</label><br>
+                <input type="text" name="fraseEx02af" id="fraseEx02af">
+                <button id="botaoEx02af"><i class="fa-solid fa-play"></i></button>
+            </fieldset>
+            <fieldset id="ex03af">
+                <legend>Exercício 03</legend>
+                <p>Crie uma função que recebe um objeto com informações de um produto e utiliza arrow function para retornar a descrição do produto em uma string.</p>
+                <label for="nomeProdutoEx03af">Digite o nome do produto:</label><br>
+                <input type="text" name="nomeProdutoEx03af" id="nomeProdutoEx03af"><br>
+                <label for="precoProdutoEx03af">Digite o preço:</label><br>
+                <input type="text" name="precoProdutoEx03af" id="precoProdutoEx03af">
+                <button id="botaoEx03af"><i class="fa-solid fa-play"></i></button>
+            </fieldset>
+        </div>
+    </section>
+    <section>
+        <!--JSON-->
+        <div>
+            <h1>JSON</h1>
+            <fieldset id="ex01js">
+                <legend>Exercício 01</legend>
+                <p>Crie um objeto JSON com informações sobre uma pessoa, como nome, idade e endereço.</p>
+                <label for="nomejson">Digite o nome da pessoa:</label><br>
+                <input type="text" name="nomejson" id="nomejson"><br>
+                <label for="idadejson">Digite a idade:</label><br>
+                <input type="text" name="idadejson" id="idadejson"><br>
+                <label for="endjson">Digite o endereço:</label><br>
+                <input type="text" name="endjson" id="endjson">
+                <button onclick="ex01js()"><i class="fa-solid fa-play"></i></button>
+            </fieldset>
+            <fieldset id="ex02js">
+                <legend>Exercício 02</legend>
+                <p>Crie uma função que recebe um objeto JSON com informações de um produto e retorna uma string com o nome e o preço do produto.</p>
+                <label for="nomeProdutoJSON">Digite o nome do produto:</label><br>
+                <input type="text" name="nomeProdutoJSON" id="nomeProdutoJSON"><br>
+                <label for="precoProdutoJSON">Digite o preço:</label><br>
+                <input type="text" name="precoProdutoJSON" id="precoProdutoJSON">
+                <button onclick="ex02js()"><i class="fa-solid fa-play"></i></button>
+            </fieldset>
+            <fieldset id="ex03js">
+                <legend>Exercício 03</legend>
+                <p>Crie uma função que recebe um array de objetos JSON com informações de produtos e retorna uma string com o nome e o preço de cada um dos produtos.</p>
+                <section>
+                    <label for="nomeProdutoJSON03">Digite o nome do produto:</label><br>
+                    <input type="text" name="nomeProdutoJSON03" class="nomeProdutoJSON03"><br>
+                    <label for="precoProdutoJSON03">Digite o preço:</label><br>
+                    <input type="text" name="precoProdutoJSON03" class="precoProdutoJSON03">
+                </section>
+                <section id="ex03sec">
+                    <!--conteúdo dinâmico-->
+                </section>
+                <button onclick="salvarEx03js()"><i class="fa-solid fa-plus"></i></button><br>
+                <p>Selecione como o resultado deve ser mostrado:</p>
+                <input type="radio" name="mostraResultado" value="tabela">Tabela
+                <input type="radio" name="mostraResultado" value="lista">Lista
+                <input type="radio" name="mostraResultado" value="alert">Alert
+                <button id="botaoEx03js"><i class="fa-solid fa-play"></i></button>
+                <section id="resultadoEx3">
+
+                </section>
+            </fieldset>
+        </div>
+    </section>
+    <section>
+        <!--Template literals e arrow functions-->
+        <div>
+            <h1>Template literals e arrow functions</h1>
+            <fieldset id="ex01tlaf">
+                <legend>Exercício 01</legend>
+                <p>Crie uma função que recebe um array de objetos JSON com informações de produtos e utiliza template literals e arrow function para retornar uma string com o nome e o preço de cada um dos produtos.</p>
+                <p><strong>O Exercício anterior também abrange este em questão pois foi escrito utilizando template literals e arrow function.</strong></p>
+            </fieldset>
+            <fieldset id="ex02tlaf">
+                <legend>Exercício 02</legend>
+                <p>Crie uma função que recebe um array de objetos JSON com informações de produtos e utiliza template literals e arrow function para retornar uma tabela HTML com as informações de cada produto.</p>
+                <p><strong>O Exercício anterior também abrange este em questão pois foi escrito utilizando template literals e arrow function.</strong></p>
+            </fieldset>
+            <fieldset id="ex03tlaf">
+                <legend>Exercício 03</legend>
+                <p>Crie uma função que recebe um array de objetos JSON com informações de produtos e utiliza template literals e arrow function para retornar uma lista HTML com as informações de cada produto.</p>
+                <p><strong>O Exercício anterior também abrange este em questão pois foi escrito utilizando template literals e arrow function.</strong></p>
+            </fieldset>
+        </div>
+    </section>
+    
+</body>
+<script src="https://kit.fontawesome.com/5892971926.js" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+</html>

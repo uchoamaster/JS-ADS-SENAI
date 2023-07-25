@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+h2{
+    font-size: 20px;
+}
+
+p{
+    width: 20vw;
+}
+
+.exercicio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3vh;
+    border-top: 1px solid;
+    width: 100%;
+    min-height: 20vh;
+}
+
+.opcoes{
+    margin: 3vh;
+}
+
+li {
+    list-style-type: none;
+}
+
+input, button {
+    border-radius: 3px;
+    border: 1px solid;
+    margin: 3px;
+}
