@@ -1,0 +1,24 @@
+<form id="myForm">
+  <input type="number" id="ageInput" placeholder="Idade" min="1" max="100">
+  <input type="number" id="heightInput" placeholder="Altura (cm)" min="50" max="300">
+  <input type="submit" value="Enviar">
+</form>
+
+<script>
+  const form = document.getElementById('myForm');
+  const ageInput = document.getElementById('ageInput');
+  const heightInput = document.getElementById('heightInput');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const age = parseInt(ageInput.value);
+    const height = parseInt(heightInput.value);
+
+    if (age >= 18 && age <= 60 && height >= 150 && height <= 200) {
+      console.log('Os campos foram preenchidos corretamente!');
+    } else {
+      console.log('Preencha corretamente todos os campos!');
+    }
+  });
+</script>
