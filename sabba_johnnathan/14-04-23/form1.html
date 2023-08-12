@@ -1,0 +1,21 @@
+<form id="myForm">
+  <input type="text" id="nameInput" placeholder="Nome" />
+  <input type="email" id="emailInput" placeholder="E-mail" />
+  <input type="submit" value="Enviar" />
+</form>
+
+<script>
+  const form = document.getElementById("myForm");
+  const nameInput = document.getElementById("nameInput");
+  const emailInput = document.getElementById("emailInput");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    if (nameInput.value !== "" && emailInput.checkValidity()) {
+      console.log("Os campos foram preenchidos corretamente!");
+    } else {
+      console.log("Preencha corretamente todos os campos!");
+    }
+  });
+</script>
