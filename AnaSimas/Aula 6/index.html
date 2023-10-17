@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Aula 6</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 d-flex flex-column align-items-center">
+                <div class="h1">
+                    Teste
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-around align-items-center">
+                <div class="col-md-3">
+                    <div id="ex1" class="h2">
+                        Exercício 1
+                    </div>
+                    <div class="p">
+                        1 - Crie um programa que leia duas palavras e as concatene, exibindo a palavra resultante, utilizando "template literals".
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <input type="text" name="ex01a" class="ex1input" placeholder="Insira uma palavra"> + <input type="text" name="ex01b" class="ex1input" placeholder="Insira outra palavra">
+                        <button type="button" class="btn btn-dark" onclick="exercicio01()">Concatenar</button>
+                    </div>
+                    <span id="resultadoEx01"></span>
+                </div>
+                <div class="col-md-3">
+                    <div id="ex2" class="h2">
+                        Exercício 2
+                    </div>
+                    <div class="p">
+                        2 - Faça um programa que clone uma listagem de frutas, mínimo 3 frutas e crie outro array com frutas diferentes mais o clone, utilize Spread Operator.
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <input type="text" name="ex02" id="ex021" placeholder="Insira uma fruta"> + <input type="text" name="ex02" id="ex022" placeholder="Insira outra fruta"> + <input type="text" name="ex02" id="ex023" placeholder="Insira mais uma fruta">
+                        <button type="button" class="btn btn-dark" onclick="exercicio02()">Criar array</button>
+                    </div>
+                    <span id="resultadoEx02"></span>
+                </div>
+                <div class="col-md-3">
+                    <div id="ex3" class="h2">
+                        Exercício 3
+                    </div>
+                    <div class="p">
+                        3- Crie uma classe cliente com os seguintes parametros: nome, email, cpf e chame uma função com Arrow function chamada relatório e exiba em uma string o nome da pessoa, o seu cpf e o seu email utilizando template literals.
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <input type="text" name="ex03a" id="nome" placeholder="Insira o nome"> + <input type="email" name="ex03b" id="email" placeholder="Insira o e-mail"> + <input type="text" name="ex03c" id="cpf" placeholder="Insira o CPF">
+                        <button type="button" class="btn btn-dark" id="botaoAdicionar">Adicionar</button>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <button type="button" class="btn btn-dark" id="botaoExibir">Exibir</button>
+                        <span id="resultadoEx03"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
