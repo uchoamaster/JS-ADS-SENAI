@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ATV - 28/05</h1></br>
+    <h1>Template Literais</h1>
+    <h3>1 - Insira seu nome</h3>
+    <input type="text" id="name">
+    <button id="btn_1">Nome</button>
+    <p id="text_1"></p>
+    <h1>------------------</h1>
+
+    <h3>2 - Insira uma data</h3>
+    <input type="date" id="date">
+    <button id="btn_2">Data</button>
+    <p id="text_2"></p>
+    <h1>------------------</h1>
+
+    <h3>3 - Monte um livro</h3>
+    <label for="title">Título do livro</label>
+    <input type="text" id="title"> </br>
+    <label for="pages">Quantidade de páginas</label>
+    <input type="number" id="pages"> </br>
+    <label for="author">Informe o autor</label>
+    <input type="text" id="author"> </br>
+    <button id="btn_3">Livro</button>
+    <p id="text_3"></p>
+    <h1>------------------</h1><br>
+    <h1>Arrow Functions</h1>
+
+    <h3>1 - 10, 20, 30</h3>
+    <button id="btn_4">Somar</button>
+    <p id="text_4"></p>
+    <h1>------------------</h1>
+
+    <h3>2 - Bom dia dependentes de café</h3>
+    <button id="btn_5">Contar caracteres</button>
+    <p id="text_5"></p>
+    <h1>------------------</h1>
+
+    <h3>3 - Skins Valorant</h3>
+    <label for="colletion">Coleção</label>
+    <input type="text" id="colletion"> </br>
+    <label for="gun">Arma</label>
+    <input type="text" id="gun"> </br>
+    <button id="btn_6">Monte a skin</button>
+    <p id="text_6"></p>
+    <h1>------------------</h1>
+    <h1>JSON</h1>
+
+    <h3>1 - Pessoa</h3>
+    <button id="btn_7">Mostrar</button>
+    <p id="text_7"></p>
+    <h1>------------------</h1>
+
+    <h3>2 - Produto</h3>
+    <button id="btn_8">Mostrar</button>
+    <p id="text_8"></p>
+    <h1>------------------</h1>
+
+    <h3>3 - Produtos</h3>
+    <button id="btn_9">Mostrar</button>
+    <p id="text_9"></p>
+    <h1>------------------</h1>
+    <h1>Template Literals e Arrow Functions</h1>
+
+    <h3>1 - Produtos Objetos</h3>
+    <button id="btn_10">Mostrar</button>
+    <p id="text_10"></p>
+    <h1>------------------</h1>
+
+    <h3>2 - Produtos Tabela</h3>
+    <button id="btn_11">Mostrar</button>
+    <p id="text_11"></p>
+    <h1>------------------</h1>
+
+    <h3>3 - Produtos Lista</h3>
+    <button id="btn_12">Mostrar</button>
+    <p id="text_12"></p>
+    <h1>------------------</h1>
+
+</body>
+<script>
+    const btn_1 = document.querySelector("#btn_1");
+    btn_1.addEventListener("click", function() {
+        let name = document.getElementById("name").value;
+        let text_final = `Bem vindo ${name}!!`;
+        document.getElementById("text_1").innerText = text_final;
+    });
+    const btn_2 = document.querySelector("#btn_2");
+    btn_2.addEventListener("click", function() {
+        let date = document.getElementById("date").value;
+        let text_final = `A data inserida foi: ${date}`;
+        document.getElementById("text_2").innerText = text_final;
+    });
+    const btn_3 = document.querySelector("#btn_3");
+    btn_3.addEventListener("click", function() {
+        let title = document.getElementById("title").value;
+        let pages = document.getElementById("pages").value;
+        let author = document.getElementById("author").value;
+
+        let book = {
+            title: title,
+            pages: pages,
+            author: author
+        };
+        let text_final = `...Livro Montado...
+        
+        Título: ${book.title}
+        Páginas: ${book.pages}
+        Autor: ${book.author} `;
+        document.getElementById("text_3").innerText = text_final;
+    });
+    const btn_4 = document.querySelector("#btn_4");
+    btn_4.addEventListener("click",() => {
+        let numbers = [10, 20, 30];
+        let result = 0;
+        for(i=0; i<numbers.length; i++){
+            result += numbers[i];
+        }
+        document.getElementById("text_4").innerText = `A soma total é: ${result}`;
+    });
+    const btn_5 = document.querySelector("#btn_5");
+    btn_5.addEventListener("click",() => {
+        let texto = ["Bom dia dependentes de café"];
+        let nums = 0;
+        for(i=0; i<texto.length; i++){
+            let a = texto[i].length;
+            nums += a;
+        }
+        document.getElementById("text_5").innerText = `A quantidade de caracteres é de: ${nums}`;
+    });
+    const btn_6 = document.querySelector("#btn_6");
+    btn_6.addEventListener("click",() => {
+        let colletion = document.getElementById("colletion").value;
+        let gun = document.getElementById("gun").value;
+        const skin = {
+            colletion: colletion,
+            gun: gun
+        }
+        document.getElementById("text_6").innerText = `A skin escolhida foi da coleção ${skin.colletion}, na ${skin.gun}!`;
+    });
+    var btn_7 = document.getElementById("btn_7");
+    btn_7.addEventListener("click", () => {
+        let person = '{"nome":"Matheus","idade":"20","endereco":"Rua Beirute"}';
+        let act = JSON.parse(person);
+        document.getElementById("text_7").innerText = `O nome é ${act.nome}, a idade é ${act.idade}, e o endereço é ${act.endereco}.`;
+    });
+    var btn_8 = document.getElementById("btn_8");
+    btn_8.addEventListener("click", () => {
+        let product_info = '{"nome":"Shampoo","preço":"129,90"}';
+        let product = JSON.parse(product_info);
+        document.getElementById("text_8").innerText = `O produto é ${product.nome}, o valor é de R$${product.preço}`;
+    });
+    var btn_9 = document.getElementById("btn_9");
+    btn_9.addEventListener("click", () => {
+        let product_info = '{"produto1":["Shampoo"," R$129.90"],"produto2":["Condicionador"," R$109.90"]}';
+        let product = JSON.parse(product_info);
+        document.getElementById("text_9").innerText = `Produto 1: ${product.produto1}; Produto 2: ${product.produto2};`;
+    });
+    var btn_10 = document.getElementById("btn_10");
+    btn_10.addEventListener("click", () => {
+        let info = '{"produto1":["Shampoo"," R$129.90"],"produto2":["Condicionador"," R$109.90"]}';
+        let obj = JSON.parse(info);
+        document.getElementById("text_10").innerText = `Produto 1: ${obj.produto1}; Produto 2: ${obj.produto2}`;
+    });
+    var btn_11 = document.getElementById("btn_11");
+    btn_11.addEventListener("click", () => {
+        let product = '{"produto1":["Shampoo"," R$129.90"],"produto2":["Condicionador"," R$109.90"],"produto3":["Sabonete"," R$19.90"]}';
+        let obj = JSON.parse(product);
+        let html_tbody = document.createElement("tbody");
+        const html_table = document.createElement("table");
+        const html_textNode = [`Produto 1: ${obj.produto1}`, `Produto 2: ${obj.produto2}`, `Produto 3: ${obj.produto3}`];
+        for (i = 0; i < 3; i++) {
+            const text = document.createTextNode(html_textNode[i]);
+            const html_tr = document.createElement("tr");
+            const html_td = document.createElement("td");
+            html_td.appendChild(text);
+            html_tr.appendChild(html_td);
+            html_tbody.appendChild(html_tr);
+        }
+        html_table.appendChild(html_tbody);
+        document.getElementById("text_11").appendChild(html_table);
+    });
+    var btn_12 = document.getElementById("btn_12");
+    btn_12.addEventListener("click", () => {
+        let product = '{"produto1":["Shampoo"," R$129.90"],"produto2":["Condicionador"," R$109.90"],"produto3":["Sabonete"," R$19.90"]}';
+        let obj = JSON.parse(product);
+        const html_ol = document.createElement("ul");
+        const html_textNode = [`Produto 1 : ${obj.produto1}`, `Produto 2 : ${obj.produto2}`, `Produto 3 : ${obj.produto3}`];
+        for (i=0;i<3;i++){
+            const text = document.createTextNode(html_textNode[i])
+            const html_li = document.createElement("li");
+            html_li.appendChild(text);
+            html_ol.appendChild(html_li);
+            
+        }
+        document.getElementById("text_12").appendChild(html_ol);
+    });
+
+</script>
+</html>

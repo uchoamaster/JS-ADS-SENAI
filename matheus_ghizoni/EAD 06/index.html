@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="onLoad()">
+
+    <h1>ATV - 09/06</h1></br>
+    <h3>1 - Concatenar</h3>
+    <label for="word1">Informe a 1° palavra</label>
+    <input type="text" id="word1"> </br>
+    <label for="word2">Informe a 2° palavra</label>
+    <input type="text" id="word2"> </br>
+    <button id="btn_1">Concatene</button>
+    <p id="text_1"></p>
+    <h1>------------------</h1>
+    
+
+    <h3>2 - Frutas</h3>
+    <p id="text_2"></p>
+    <button id="btn_2">Mostrar mais</button>
+    <p id="text_3"></p>
+    <h1>------------------</h1>
+
+    <h3>3 - Pessoa</h3>
+    <button id="btn_3">Mostrar</button>
+    <p id="text_4"></p>
+    <h1>------------------</h1>
+
+</body>
+<script>
+    var btn_1 = document.getElementById("btn_1");
+    btn_1.addEventListener("click", () => {
+        let word1 = document.getElementById("word1").value;
+        let word2 = document.getElementById("word2").value;
+        let words = `${word1} ${word2}`;
+    document.getElementById("text_1").innerHTML = `Resultado: ${words}`;
+    });
+    var fruit = ['Banana', 'Maçã', 'Laranja'];
+    function onLoad(){
+        let text = '';
+        for(i=0; i<fruit.length; i++){
+            text += `Fruta ${i+1}: ${fruit[i]}
+            ` 
+        }
+        document.getElementById("text_2").innerText = text;
+    }
+    var btn_2 = document.getElementById("btn_2");
+    btn_2.addEventListener("click", () => {
+        let newFruits = ['Uva', 'Abacate', 'Tomate'];
+        let fruits = [...fruit, ...newFruits];
+        let text = '';
+        for(i=3; i<fruits.length; i++){
+            text += `Fruta ${i+1}: ${fruits[i]}
+            ` 
+        }
+        document.getElementById("text_3").innerText = text;
+    });
+    var btn_3 = document.getElementById("btn_3");
+    btn_3.addEventListener("click", () => {
+        class Person {
+            constructor(name, email, cpf){
+                this.name = name;
+                this.email = email;
+                this.cpf = cpf;
+            }
+        }
+        const pessoa = new Person("Matheus Ghizoni", "matheus.ghizoni@gmail.com", "119.073.111-03");
+        let text = `Nome: ${pessoa.name}
+        E-mail: ${pessoa.email}
+        CPF: ${pessoa.cpf}`;
+        document.getElementById("text_4").innerText = text;
+    });
+</script>
+</html>

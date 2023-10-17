@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>var = global</h2>
+    <h2>let = não global, repeita a identação</h2>
+    <h2>const = a constante nunca muda</h2>
+</body>
+<script>
+
+    var name = "Matheus";
+    console.log(name);
+    name = "Ghizoni";
+    console.log(name);
+    {
+        let age = 20;
+        console.log(age);
+        console.log(name);
+    }
+    const nameCompleto = "Matheus Ghizoni";
+    //nameCompleto = "Matheus de Sousa Ghizoni";
+    console.log(nameCompleto);
+</script>
+</html>

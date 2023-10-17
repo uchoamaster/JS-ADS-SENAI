@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ATV</h1>
+    <h3>1 - Switch</h3>
+    <div>Sorvete - Refrigerante - Suco</div>
+    <input type="text" id="bebidas" name="bebidas"> 
+    <button onclick="verificaEstoque()">Enviar</button>
+    <h1>------------------</h1>
+
+    <h3>Subtração e Divisão</h3>
+    <div>Valor 1</div>
+    <input type="number" id="valor1">
+    <div>Valor 2</div>
+    <input type="number" id="valor2">
+    </br>
+    <button onclick="subtrair()">Subtrair</button>
+    <button onclick="dividir()">Dividir</button>
+    <h1>------------------</h1>
+
+    <h3>4 - Contador</h3>
+    <button onclick="contar()">0 à 1000</button>
+    <div id="contar"></div>
+    <h1>------------------</h1>
+
+    <h3>5 - Endereço</h3>   
+    <button onclick="endereco()">Endereço</button>
+    <div id="endereco"></div>
+    <h1>------------------</h1>
+
+    <h3>6 - Constante</h3>
+    <button onclick="constante()">Const</button>
+    <h1>------------------</h1>
+
+    <h3>7 - Nota</h3>
+    <input type="number" id="nota">
+    <button onclick="validar()">Validar</button>
+    <div id="status"></div>
+</body>
+<script>
+    var sec=0;
+    var intervalo;
+    function verificaEstoque() {
+        let input = document.getElementById("bebidas");
+        let alimento = input.value;
+        switch(alimento){
+            case "Refrigerante":
+                alert("Água Coca latão");
+                break;
+            case "Sorvete":
+                alert("Iorgute gelado");
+                break;
+            case "Suco": 
+                alert("Aiii que delicia");
+                break;
+            default:
+                alert("Isso não tem aqui, some da minha frente mermão");
+        }
+    } 
+    function subtrair(){
+        let input = document.getElementById("valor1");
+        let valor1 = input.value;
+        input = document.getElementById("valor2");
+        let valor2 = input.value;
+        let resultado = valor1 - valor2;
+        alert(resultado);
+    }
+    function dividir(){
+        let input = document.getElementById("valor1");
+        let valor1 = input.value;
+        input = document.getElementById("valor2");
+        let valor2 = input.value;
+        if(valor2 == 0) {
+            alert("Não é possível dividir um número por 0");
+        } else {
+            let resultado = valor1 / valor2;
+            alert(resultado);
+        }
+    }
+    function contadora(){
+        sec++;
+        document.getElementById("contar").innerText = sec;
+        if(sec == 1000){
+            clearInterval(intervalo);
+        }
+    }
+    function contar(){
+        intervalo = setInterval(contadora,5);
+    }
+    function endereco(){
+        let local = {
+            usuario: "Matheus",
+            cidade: "Joinville",
+            estado: "SC",
+            bairro: "Itaum",
+            rua: "Beirute",
+            numero: "111"
+        }
+        let frase = "O "+local.usuario+" mora em "+local.cidade+"-"+local.estado+", no bairro "+local.bairro+", na rua "+local.rua+" com n°"+local.numero;
+        document.getElementById("endereco").innerText = frase;
+    }
+    function constante(){
+        const elu = "Palhaço";
+        console.log(elu);
+        alert(elu); 
+    }
+    function validar(){
+        let input = document.getElementById("nota");
+        let nota = input.value;
+        if(nota >= 7){
+            document.getElementById("status").innerText = "Aprovado";
+        } else if(nota < 5){
+            document.getElementById("status").innerText = "Reprovado";
+        } else {
+            document.getElementById("status").innerText = "Recuperação";
+        }
+    }
+</script>
+</html>
